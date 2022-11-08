@@ -1,0 +1,15 @@
+F:\Code_\Entrainement_CS\bin\Debug\net6.0\Entrainement_CS.exe
+F:\Code_\Entrainement_CS\bin\Debug\net6.0\Entrainement_CS.deps.json
+F:\Code_\Entrainement_CS\bin\Debug\net6.0\Entrainement_CS.runtimeconfig.json
+F:\Code_\Entrainement_CS\bin\Debug\net6.0\Entrainement_CS.dll
+F:\Code_\Entrainement_CS\bin\Debug\net6.0\Entrainement_CS.pdb
+F:\Code_\Entrainement_CS\obj\Debug\net6.0\Entrainement_CS.csproj.AssemblyReference.cache
+F:\Code_\Entrainement_CS\obj\Debug\net6.0\Entrainement_CS.GeneratedMSBuildEditorConfig.editorconfig
+F:\Code_\Entrainement_CS\obj\Debug\net6.0\Entrainement_CS.AssemblyInfoInputs.cache
+F:\Code_\Entrainement_CS\obj\Debug\net6.0\Entrainement_CS.AssemblyInfo.cs
+F:\Code_\Entrainement_CS\obj\Debug\net6.0\Entrainement_CS.csproj.CoreCompileInputs.cache
+F:\Code_\Entrainement_CS\obj\Debug\net6.0\Entrainement_CS.dll
+F:\Code_\Entrainement_CS\obj\Debug\net6.0\refint\Entrainement_CS.dll
+F:\Code_\Entrainement_CS\obj\Debug\net6.0\Entrainement_CS.pdb
+F:\Code_\Entrainement_CS\obj\Debug\net6.0\Entrainement_CS.genruntimeconfig.cache
+F:\Code_\Entrainement_CS\obj\Debug\net6.0\ref\Entrainement_CS.dll
