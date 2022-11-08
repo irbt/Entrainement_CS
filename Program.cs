@@ -2,39 +2,37 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace SoloLearn
 {
     class Program
     {
+        class Shape {
+            public virtual void Draw() {
+                Console.Write("Base Draw");
+            }
+        }
+        class Circle : Shape {
+            public override void Draw() {
+                // draw a circle...
+                Console.WriteLine("Circle Draw");
+            }
+        }
+        class Rectangle : Shape {
+            public override void Draw() {
+                // draw a rectangle...
+                Console.WriteLine("Rect Draw");
+            }
+        }
         static void Main(string[] args)
         {
-            WayStatus status = new WayStatus();
+            Shape c = new Circle();
+            c.Draw();
+
+            Shape r = new Rectangle();
+            r.Draw();
+
         }
-    }
-    class Flight
-    {
-        public Flght()
-        {
-            Console.WriteLine("Registration");
-        }
-        ~Flight()
-        {
-            Console.WriteLine("Closed");
-        }
-    }
-    /*derive this class from Flight class,
-    define constructor and destructor for it*/
-    class WayStatus:Flight
-    {
-    public WayStatus()
-    {
-        Console.WriteLine("On the way");
-    }
-    ~WayStatus() =>
-        Console.WriteLine("Landed");
-    
     }
 }
