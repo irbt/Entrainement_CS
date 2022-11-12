@@ -10,47 +10,47 @@ namespace SoloLearn
     {
         static void Main(string[] args)
         {
-            Figure rectangle = new Rectangle(5, 6);
-            Figure triangle = new Triangle(4, 8, 3);
+            string color = Console.ReadLine();
+            string equipment = Console.ReadLine();
 
-            Console.WriteLine(rectangle.Perimeter());
-            Console.WriteLine(triangle.Perimeter());
+            Car car = new Car(color, equipment);
+
+            car.GetColor();
+            car.GetEquipment();
         }
     }
-    abstract class Figure
+
+    public interface IColor
     {
-        //define abstract method Perimeter with no body
-        public abstract int Perimeter();
+        void GetColor();
     }
-    class Rectangle : Figure
+
+    public interface IEquipment
     {
-        public int width;
-        public int height;
-        public Rectangle(int widt, int height)
+        void GetEquipment();
+    }
+    
+    //implement IColor & IEquipment interfaces
+    public class Car
+    {
+        public string color;
+        public string equipment;
+
+        public Car(string color, string equipment)
         {
-            this.width = widt;
-            this.height = height;
-        }
-        //override Perimeter method for rectangle
-        public override int Perimeter(){
-            return  (2*width) + (2*height);
-        }
-    }
-    class Triangle : Figure
-    {
-        public int side1;
-        public int side2;
-        public int side3;
-        public Triangle(int s1, int s2, int s3)
-        {
-            this.side1 = s1;
-            this.side2 = s2;
-            this.side3 = s3;
+            this.color = color;
+            this.equipment = equipment;
         }
         
-        //override Perimeter method for triangle
-        public override int Perimeter(){
-            return side1+side2+side3;
+        //reimplement this method
+        public void GetColor()
+        {
+            
+        }
+        //reimplement this method
+        public void GetEquipment()
+        {
+            
         }
     }
 }
