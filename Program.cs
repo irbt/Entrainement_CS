@@ -10,8 +10,8 @@ namespace SoloLearn
     {
         static void Main(string[] args)
         {
-            string color = Console.ReadLine();
-            string equipment = Console.ReadLine();
+            string color = "Red";
+            string equipment = "Standard";
 
             Car car = new Car(color, equipment);
 
@@ -31,7 +31,7 @@ namespace SoloLearn
     }
     
     //implement IColor & IEquipment interfaces
-    public class Car
+    public class Car : IColor,IEquipment
     {
         public string color;
         public string equipment;
@@ -45,12 +45,12 @@ namespace SoloLearn
         //reimplement this method
         public void GetColor()
         {
-            
+            Console.WriteLine("Color: "+ color);
         }
         //reimplement this method
         public void GetEquipment()
         {
-            
+            Console.WriteLine("Equipment: "+ equipment);
         }
     }
 }
