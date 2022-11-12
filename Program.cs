@@ -10,38 +10,47 @@ namespace SoloLearn
     {
         static void Main(string[] args)
         {
-            Unit unit1 = new Unit();
-            Unit musketeer = new Musketeer();
-            Unit magician = new Magician();
+            Figure rectangle = new Rectangle(5, 6);
+            Figure triangle = new Triangle(4, 8, 3);
 
-            unit1.Attack();
-            musketeer.Attack();
-            magician.Attack();
+            Console.WriteLine(rectangle.Perimeter());
+            Console.WriteLine(triangle.Perimeter());
         }
     }
-
-    class Unit
+    abstract class Figure
     {
-        public virtual void Attack()
+        //define abstract method Perimeter with no body
+        public abstract int Perimeter();
+    }
+    class Rectangle : Figure
+    {
+        public int width;
+        public int height;
+        public Rectangle(int widt, int height)
         {
-            Console.WriteLine("Using sword!");
+            this.width = widt;
+            this.height = height;
+        }
+        //override Perimeter method for rectangle
+        public override int Perimeter(){
+            return  (2*width) + (2*height);
         }
     }
-    
-    /*derive the class from Unit class
-    and override Attack() method*/
-    class Musketeer:Unit
+    class Triangle : Figure
     {
-        public override void Attack(){
-            Console.WriteLine("Using musket!");
+        public int side1;
+        public int side2;
+        public int side3;
+        public Triangle(int s1, int s2, int s3)
+        {
+            this.side1 = s1;
+            this.side2 = s2;
+            this.side3 = s3;
         }
-    }
-    /*derive the class from Unit class
-    and override Attack() method*/
-    class Magician : Unit
-    {
-        public override void Attack(){
-            Console.WriteLine("Using magic!");
+        
+        //override Perimeter method for triangle
+        public override int Perimeter(){
+            return side1+side2+side3;
         }
     }
 }
