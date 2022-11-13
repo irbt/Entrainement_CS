@@ -29,6 +29,22 @@ namespace SoloLearn
         public Player(Difficulty x)
         {
             //your code goes here
+            //Difficulty.x = Difficulty.Easy;
+            
+            //int x = (int) di ;
+
+
+            switch (x) {
+                case  Difficulty.Easy:
+                Console.WriteLine("You have 3 minutes 45 seconds");
+                break ;
+                case  Difficulty.Medium:
+                Console.WriteLine("You have 3 minutes 20 seconds");
+                break ;
+                case  Difficulty.Hard:
+                Console.WriteLine("You have 3 minutes");
+                break ;
+            }
             
         }
     }
