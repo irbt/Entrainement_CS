@@ -1,56 +1,53 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace SoloLearn
+namespace Code_Coach_Challenge
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string color = "Red";
-            string equipment = "Standard";
+            Draw pencil = new Draw();
+            Draw brush = new Brush();
+            Draw spray = new Spray();
 
-            Car car = new Car(color, equipment);
+            pencil.StartDraw();
+            brush.StartDraw();
+            spray.StartDraw();
 
-            car.GetColor();
-            car.GetEquipment();
         }
     }
 
-    public interface IColor
+    /*
+    Draw => "Using pencil"
+    Brush => "Using brush"
+    Spray => "Using spray"
+    */
+
+    public interface IDraw
     {
-        void GetColor();
+        void StartDraw();
     }
 
-    public interface IEquipment
+    class Draw : IDraw
     {
-        void GetEquipment();
+        public virtual void StartDraw()
+        {
+            Console.WriteLine("Using pencil");
+        }
     }
-    
-    //implement IColor & IEquipment interfaces
-    public class Car : IColor,IEquipment
-    {
-        public string color;
-        public string equipment;
 
-        public Car(string color, string equipment)
-        {
-            this.color = color;
-            this.equipment = equipment;
-        }
-        
-        //reimplement this method
-        public void GetColor()
-        {
-            Console.WriteLine("Color: "+ color);
-        }
-        //reimplement this method
-        public void GetEquipment()
-        {
-            Console.WriteLine("Equipment: "+ equipment);
-        }
+    //inherit this class from the class Draw
+    class Brush
+    {
+        //implement the StartDraw() method
+
+    }
+
+    //inherit this class from the class Draw
+    class Spray
+    {
+        //implement the StartDraw() method
+
     }
 }
