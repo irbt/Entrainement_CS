@@ -38,16 +38,23 @@ namespace Code_Coach_Challenge
     }
 
     //inherit this class from the class Draw
-    class Brush
+    class Brush : Draw
     {
         //implement the StartDraw() method
+        public override void  StartDraw(){
+            Console.WriteLine("Using brush");
+        }
 
     }
 
     //inherit this class from the class Draw
-    class Spray
+    class Spray : Draw
     {
         //implement the StartDraw() method
+        public override void StartDraw(){
+              Console.WriteLine("Using spray");
+
+        }
 
     }
 }
