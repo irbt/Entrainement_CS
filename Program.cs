@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,34 +11,31 @@ namespace SoloLearn
     {
         static void Main(string[] args)
         {
-            int length = Convert.ToInt32(Console.ReadLine());
-            int width = Convert.ToInt32(Console.ReadLine());
-            int height = Convert.ToInt32(Console.ReadLine());
 
-            Cuboid cuboid = new Cuboid(length, width, height);
-
-            Console.WriteLine("Volume: " + cuboid.Volume());
-            Console.WriteLine("Perimeter: " + cuboid.Perimeter());
+            Player player1 = new Player(Difficulty.Easy);
+            Player player2 = new Player(Difficulty.Medium);
+            Player player3 = new Player(Difficulty.Hard);
         }
     }
-    struct Cuboid
+    
+    /*
+    Easy => "You have 3 minutes 45 seconds"
+    Medium = > "You have 3 minutes 20 seconds"
+    Hard => "You have 3 minutes"
+    */
+
+    class Player
     {
-        public int length;
-        public int width;
-        public int height;
-
-        
-        
-        
-        
-        public int Volume()
+        public Player(Difficulty x)
         {
-            
-        }
-        
-        public int Perimeter()
-        {
+            //your code goes here
             
         }
     }
+     enum Difficulty
+    {
+        Easy,
+        Medium,
+        Hard
+    };
 }
