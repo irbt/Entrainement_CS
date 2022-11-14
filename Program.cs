@@ -14,7 +14,22 @@ namespace SoloLearn
             string str = "Some text";
             File.WriteAllText("test.txt", str);
             
+            string txt = File.ReadAllText("test.txt");
+            Console.WriteLine(txt); 
+
+            string add = "added text";
+             
+
             
+            File.AppendAllText ("test.txt",add);
+            
+            string txt2 = File.ReadAllText("test.txt");
+            Console.WriteLine(txt2); 
+
+            if ( File.Exists ("test.txt")){
+              Console.WriteLine("le fichier existe");
+            }
+
         }
     }
 }
