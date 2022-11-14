@@ -1,9 +1,8 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 
 namespace SoloLearn
 {
@@ -11,25 +10,26 @@ namespace SoloLearn
     {
         static void Main(string[] args)
         {
-            string str = "Some text";
-            File.WriteAllText("test.txt", str);
-            
-            string txt = File.ReadAllText("test.txt");
-            Console.WriteLine(txt); 
+            try
+            {
+                int drinks = Convert.ToInt32(Console.ReadLine());
+                int shelves = Convert.ToInt32(Console.ReadLine());
 
-            string add = "added text";
-             
+                //your code goes here
 
-            
-            File.AppendAllText ("test.txt",add);
-            
-            string txt2 = File.ReadAllText("test.txt");
-            Console.WriteLine(txt2); 
-
-            if ( File.Exists ("test.txt")){
-              Console.WriteLine("le fichier existe");
             }
+            /*
+             * 1. DivideByZeroException => "At least 1 shelf"
+             * 2. FormatException => "Please insert an integer"
+            */
+            catch ()
+            {
 
+            }
+            catch ()
+            {
+
+            }
         }
     }
 }
