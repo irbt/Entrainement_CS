@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace SoloLearn
 {
@@ -10,23 +11,10 @@ namespace SoloLearn
     {
         static void Main(string[] args)
         {
-            string[] tours = { "England", "Spain", "Italy", "Portugal", "France" };
-            int choice = Convert.ToInt32(Console.ReadLine());
+            string str = "Some text";
+            File.WriteAllText("test.txt", str);
             
             
-            //your code goes here
-            try
-            {
-                Console.WriteLine(tours[choice]);
-            }
-            catch (Exception )
-            {
-                Console.WriteLine("Wrong number");
-            }
-            finally
-            {
-                Console.WriteLine("Goodbye");
-            }
         }
     }
 }
