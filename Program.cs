@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,47 +10,23 @@ namespace SoloLearn
     {
         static void Main(string[] args)
         {
-
-            Player player1 = new Player(Difficulty.Easy);
-            Player player2 = new Player(Difficulty.Medium);
-            Player player3 = new Player(Difficulty.Hard);
-        }
-    }
-    
-    /*
-    Easy => "You have 3 minutes 45 seconds"
-    Medium = > "You have 3 minutes 20 seconds"
-    Hard => "You have 3 minutes"
-    */
-
-    class Player
-    {
-        public Player(Difficulty x)
-        {
+            string[] tours = { "England", "Spain", "Italy", "Portugal", "France" };
+            int choice = Convert.ToInt32(Console.ReadLine());
+            
+            
             //your code goes here
-            //Difficulty.x = Difficulty.Easy;
-            
-            //int x = (int) di ;
-
-
-            switch (x) {
-                case  Difficulty.Easy:
-                Console.WriteLine("You have 3 minutes 45 seconds");
-                break ;
-                case  Difficulty.Medium:
-                Console.WriteLine("You have 3 minutes 20 seconds");
-                break ;
-                case  Difficulty.Hard:
-                Console.WriteLine("You have 3 minutes");
-                break ;
+            try
+            {
+                Console.WriteLine(tours[choice]);
             }
-            
+            catch (Exception )
+            {
+                Console.WriteLine("Wrong number");
+            }
+            finally
+            {
+                Console.WriteLine("Goodbye");
+            }
         }
     }
-     enum Difficulty
-    {
-        Easy,
-        Medium,
-        Hard
-    };
 }
