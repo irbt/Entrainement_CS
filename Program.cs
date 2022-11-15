@@ -21,11 +21,11 @@ namespace SoloLearn
         }
     }
     //make this class generic
-    class Elems
+    class Elems <T>
     {
-        public int[] elements = new int[3];
+        public T[] elements = new T[3];
 
-        public void Add(int elem1, int elem2, int elem3)
+        public void Add (T elem1, T elem2, T elem3)
         {
             elements[0] = elem1;
             elements[1] = elem2;
@@ -34,7 +34,7 @@ namespace SoloLearn
 
         public void Show()
         {
-            foreach (int item in elements)
+            foreach (T item in elements)
             {
                 Console.Write(item + " ");
             }
