@@ -13,12 +13,13 @@ namespace SoloLearn
         {
             string text = "Python tuile";
             int intNum = 3;
-            double doubNum = 3.82;
+            double doubNum = 3.8;
 
 
             Printer.Print<string>(ref text);
             Printer.Print<int>(ref intNum);
             Printer.Print<double>(ref doubNum);
+            Printer.Print<double , int>(ref doubNum , ref intNum);
         }
     }
     class Printer
@@ -28,5 +29,8 @@ namespace SoloLearn
             Console.WriteLine("Showing " + a);
         }
         
+        public static void Print<T , U>( ref T a , ref U b){
+            Console.WriteLine("Showing " + a + " + " + b);
     }
+}
 }
