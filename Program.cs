@@ -11,23 +11,22 @@ namespace SoloLearn
     {
         static void Main(string[] args)
         {
-            string text = "PYthon";
+            string text = "Python tuile";
             int intNum = 3;
-            double doubNum = Convert.ToDouble(Console.ReadLine());
+            double doubNum = 3.82;
 
 
-            Printer.Print(text);
-            Printer.Print(intNum);
-            Printer.Print(doubNum);
+            Printer.Print<string>(ref text);
+            Printer.Print<int>(ref intNum);
+            Printer.Print<double>(ref doubNum);
         }
     }
     class Printer
     {
         //your code goes here
-       
+        public static void Print<T>( ref T a){
+            Console.WriteLine("Showing " + a);
         }
         
-        
-    
-
+    }
 }
