@@ -3,66 +3,26 @@ using System.Collections.Generic;
 
 namespace SoloLearn
 {
-	class Program
-	{
-		static void Main(string[] args)
-		{
-		    List<int> li = new List<int>();
-            li.Add(59);
-            li.Add(72);
-            li.Add(95);
-            li.Add(5);
-            li.Add(9);
-            li.RemoveAt(1); // remove 72
+    /*You need to write a program for the game to sort player scores.
+The program you are given takes N number as input, which represents the number of players, and defines a score list.
+Complete the program to take N count of numbers (the scores) as input, store them in a scores list, sort and output them, each separated by a space.*/
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int numOfPlayers = Convert.ToInt32(Console.ReadLine());
+
+            List<int> scores = new List<int>();
+            int count = 0;
+            while (count<numOfPlayers)
+            {
+                int score = Convert.ToInt32(Console.ReadLine());
+                //your code goes here
+                
+            }
+
+            //sort the list and output elements
             
-            Console.Write("\nList: ");
-            for (int x = 0; x < li.Count; x++)
-                Console.Write(li[x] + " "); // 59  95  5  9
-            li.Sort();
-            //li.Clear();
-            Console.Write("\nSorted: ");
-            for (int x = 0; x < li.Count; x++)
-                Console.Write(li[x] + " "); // 5  9  59  95
-            
-            int test = 77;
-
-            //-------------------------------------------------------------
-            li.Insert(2, test);
-            li.Add(9);
-
-            Console.Write("\nSorted: ");
-            for (int x = 0; x < li.Count; x++)
-                Console.Write(li[x] + " "); // 5  9  59  95
-            // -------------------------------------------------
-            li.Remove(9);
-            Console.Write("\nSorted: ");
-            for (int x = 0; x < li.Count; x++)
-                Console.Write(li[x] + " "); 
-
-            // -------------------------------------------------
-            li.TrimExcess();
-            //-------------------------------
-            /*Console.WriteLine("----------------------------------------------");
-            Console.WriteLine("Entrez le numéro à chercher");
-            int s =  Convert.ToInt32( Console.ReadLine());
-            if (li.Contains(s)){
-                Console.WriteLine("true");
-            }else {
-                Console.WriteLine("pas trouvé");
-
-            };
-
-            Console.WriteLine("----------------------------------------------");*/
-            li.Insert(5, 977 );
-            Console.Write("\nSorted: ");
-            for (int x = 0; x < li.Count; x++)
-                Console.Write(li[x] + " "); 
-
-            li.Insert(6, 66 ); // plante si index>6
-            Console.Write("\nSorted: ");
-            for (int x = 0; x < li.Count; x++)
-                Console.Write(li[x] + " "); 
-
-		}
-	}
+        }
+    }
 }
