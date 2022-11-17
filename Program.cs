@@ -7,27 +7,24 @@ namespace SoloLearn
 	{
 		static void Main(string[] args)
 		{
-		    SortedList<string, int> sl = new SortedList<string, int>();
+		    Stack<int> s = new Stack<int>();
+            
+		    s.Push(59);
+		    s.Push(72);
+		    s.Push(65);
 
-		    sl.Add("Solo", 59);
-		    sl.Add("A", 95);
-		    sl.Add("Learn", 72);
-		    //sl.Remove("A");
+		    Console.Write("Stack: ");
+		    foreach (int i in s)
+		        Console.Write(i + " ");  // 65  72  59
+		    Console.Write("\nCount: " + s.Count);  // 3
             
-		    Console.WriteLine("Sorted List: ");
-		    foreach (string s in sl.Keys)
-		        Console.WriteLine(s + ": " + sl[s]);  // Learn: 72  Solo: 59
-		    Console.WriteLine("\nCount: " + sl.Count);  // 2
-
-            // ----------VALUES --------!
-            Console.WriteLine("\nIndexed retrieval using the Values " +
-                "property: Values[2] = {0}", sl.Values[2]);		
+		    Console.Write("\nTop: " + s.Peek());  // 65
+		    Console.Write("\nPop: " + s.Pop());  // 65
             
-            
-            if (sl.ContainsKey("A"))  {
-                Console.WriteLine("Contient : A" );
-            }
-            
+		    Console.Write("\nStack: ");
+		    foreach (int i in s)
+		        Console.Write(i + " ");  // 72  59
+		    Console.Write("\nCount: " + s.Count);  // 2
+		}
 	}
-}
 }
