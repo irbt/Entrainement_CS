@@ -3,39 +3,31 @@ using System.Collections.Generic;
 
 namespace SoloLearn
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Entrez nb de score");
-            int numOfPlayers = Convert.ToInt32(Console.ReadLine());
-            //Console.WriteLine ("nb players = " + numOfPlayers);
+	class Program
+	{
+		static void Main(string[] args)
+		{
+		    SortedList<string, int> sl = new SortedList<string, int>();
 
-            List<int> scores = new List<int>();
-            int count = 0;
-            while (count < numOfPlayers)
-            {
-                Console.WriteLine("Entrez un score");
+		    sl.Add("Solo", 59);
+		    sl.Add("A", 95);
+		    sl.Add("Learn", 72);
+		    //sl.Remove("A");
+            
+		    Console.WriteLine("Sorted List: ");
+		    foreach (string s in sl.Keys)
+		        Console.WriteLine(s + ": " + sl[s]);  // Learn: 72  Solo: 59
+		    Console.WriteLine("\nCount: " + sl.Count);  // 2
 
-                int score = Convert.ToInt32(Console.ReadLine());
-                //your code goes here
-                //Console.WriteLine("Boucle avant incr " + count);
-                scores.Add(score);
-               //Console.WriteLine(scores[count]);
-                count++;
-                //Console.WriteLine("Boucle après incr " + count);
-                
-            }
-
-            //sort the list and output elements
-            scores.Sort();
+            // ----------VALUES --------!
+            Console.WriteLine("\nIndexed retrieval using the Values " +
+                "property: Values[2] = {0}", sl.Values[2]);		
             
             
-            for (int i=0 ; i < count ; i++){
-                Console.Write ( scores [i] + " ");
-                
+            if (sl.ContainsKey("A"))  {
+                Console.WriteLine("Contient : A" );
             }
             
-        }
-    }
+	}
+}
 }
