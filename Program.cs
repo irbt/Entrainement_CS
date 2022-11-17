@@ -1,34 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 
 namespace SoloLearn
 {
-	class Program
-	{
-		static void Main(string[] args)
-		{
-		    Stack<int> s = new Stack<int>();
-            
-		    s.Push(59);
-		    s.Push(72);
-		    s.Push(65);
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Queue<int> q = new Queue<int>();
 
-		    Console.Write("Stack: ");
-		    foreach (int i in s)
-		        Console.Write(i + " ");  // 65  72  59
-		    Console.Write("\nCount: " + s.Count);  // 3
-            
-		    Console.Write("\nTop: " + s.Peek());  // 65
-		    Console.Write("\nPop: " + s.Pop());  // 65
-            
-		    Console.Write("\nStack: ");
-		    foreach (int i in s)
-		        Console.Write(i + " ");  // 72  59
-		    Console.Write("\nCount: " + s.Count);  // 2
+            while (q.Count<3)
+            {
+                int num = Convert.ToInt32(Console.ReadLine());
+                //your code goes here
+                
+            }
 
-            Stack<int> s2 = new Stack<int>( s.ToArray());
-           
-           
-		}
-	}
+            Console.Write("Queue: ");
+            foreach (int i in q)
+                Console.Write(i + " ");
+
+            Console.WriteLine();
+            
+            Console.Write("Sorted: ");
+            //your code goes here
+            
+        }
+    }
 }
