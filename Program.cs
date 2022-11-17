@@ -25,6 +25,10 @@ namespace SoloLearn
 		    foreach (int i in s)
 		        Console.Write(i + " ");  // 72  59
 		    Console.Write("\nCount: " + s.Count);  // 2
+
+            Stack<int> s2 = new Stack<int>( s.ToArray());
+           
+           
 		}
 	}
 }
