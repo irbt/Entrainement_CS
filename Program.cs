@@ -10,7 +10,7 @@ namespace SoloLearn
     {
         static void Main(string[] args)
         {
-            int discount = Convert.ToInt32(Console.ReadLine());
+            double discount = 10;
 
             Dictionary<string, int> coffee = new Dictionary<string, int>();
             coffee.Add("Americano", 50);
@@ -22,7 +22,30 @@ namespace SoloLearn
 
 
             //your code goes here
+           string [] names = new string [coffee.Count];
+             
+            foreach (string s in coffee.Keys){
+                 names = coffee.Keys.ToArray();
+            }
             
+            double newprice ;
+
+            foreach (string n in names)
+            {
+                //Console.WriteLine(coffee[n]) ;
+                Console.Write(n+ ": " );
+                newprice = coffee[n] * (1-(discount/100));
+                Console.WriteLine(newprice) ;
+
+            }
+
+
+
+            /*for( int i = 0 ; i < names.Length ; i++ ){
+                coffee
+            }*/
+            
+
 
 
         }
